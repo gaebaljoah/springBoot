@@ -50,3 +50,21 @@ Hello
 </html>
 ```
 - static/index.html을 올려두면 Welcome Page 기능을 제공.
+
+### spring 동작환경
+
+- 1.웹브라우저 -> localhost:8080/hello 
+- 2.내장 톰켓 서버(was) -> 스프링 컨테이너 컨트롤러를 통해 데이터 return
+- 3.viewresolver 스프링부트 템플릿엔진 기본 viewName 매핑 (ex:resource:/templates/ + {viewName}+.html {}:return 문자열)
+
+### gradlew build 관련
+- build 실행 시 
+```cmd
+./gradlew build
+cd build/libs
+java -jar hello-spring-0.0.1-SNAPSHOT.jar
+```
+- build 제거 (gradelw있는 폴더로 이동)
+```cmd
+./gradelw clean
+```
