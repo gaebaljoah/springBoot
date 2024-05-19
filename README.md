@@ -68,3 +68,18 @@ java -jar hello-spring-0.0.1-SNAPSHOT.jar
 ```cmd
 ./gradelw clean
 ```
+
+### 정적 컨텐츠 이미지
+- resource/static 아래의 파일들은 정적 컨텐츠 제공
+
+### MVC와 템플릿 엔진
+- MVC : Model, view, Controller
+![img.png](src%2Fmain%2Fresources%2Fimages%2Fimg.png)
+
+### @ResponseBody 사용원리
+- @ResponseBody를 사용시 HTTP의 Body에 문자 내용을 직접 반환
+- viewResolver 대신에 HttpMessageConverter가 동작
+- 기본 문자처리 : 'StringHttpMessageConverter'
+- 기본 객체처리 : 'MappingJackson2HttpMessageConverter'
+- byte 처리 등등 기타 여러 HttpMessageConverter가 기본으로 등록되어 있음
+
